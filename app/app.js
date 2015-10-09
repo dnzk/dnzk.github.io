@@ -4,7 +4,7 @@
   angular.module('swapi', [])
     .controller('BodyController', function($scope) {
       function initialize() {
-        console.log('chthulu dawn');
+        $scope.hail = 'Chthulu';
       }
       initialize();
     });
