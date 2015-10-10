@@ -16,6 +16,7 @@
   "dependencies": {
     "angular-ui-router": "~0.2.15",
     "angular": "~1.4.7",
-    "restangular": "~1.5.1"
+    "restangular": "~1.5.1",
+    "sprintf": "~1.0.3"
   }
 }

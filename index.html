@@ -10,10 +10,17 @@
         <span>{{ character.name }}</span>
       </li>
     </ul>
+    <button ng-click="navigate('prev')">
+      Previous
+    </button>
+    <button ng-click="navigate('next')">
+      Next
+    </button>
     
     <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="./bower_components/restangular/dist/restangular.js"></script>
     <script type="text/javascript" src="./bower_components/lodash/lodash.js"></script>
+    <script type="text/javascript" src="./bower_components/sprintf/src/sprintf.js"></script>
     <script type="text/javascript" src="./app/app.js"></script>
   </body>
 </html>
