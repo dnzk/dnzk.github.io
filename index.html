@@ -7,25 +7,12 @@
 </head>
 
 <body>
-  <div class="container" ng-controller="CharactersController">
-    <h1>Pan daemon aeon</h1>
-    <ul>
-      <li ng-repeat="character in characters.list track by $index">
-        <span>{{ character.name }}</span>
-      </li>
-    </ul>
-    <button ng-click="navigate('prev')">
-      Previous
-    </button>
-    <button ng-click="navigate('next')">
-      Next
-    </button>
-    <!-- this is a comment -->
-  </div>
+  <div ui-view></div>
 
   <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="./bower_components/restangular/dist/restangular.js"></script>
   <script type="text/javascript" src="./bower_components/lodash/lodash.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script type="text/javascript" src="./bower_components/sprintf/src/sprintf.js"></script>
   <script type="text/javascript" src="./app/app.js"></script>
   <script type="text/javascript" src="./app/characters/characters.controller.js"></script>

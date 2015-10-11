@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <li ng-repeat="character in characters.list track by $index">
+      <span>{{ character.name }}</span>
+    </li>
+  </ul>
+  <button ng-click="navigate('prev')">
+    Previous
+  </button>
+  <button ng-click="navigate('next')">
+    Next
+  </button>
+</div>
