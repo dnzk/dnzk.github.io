@@ -1,7 +1,7 @@
 (function(angular) {
   'use strict';
 
-  function CharactersController($scope, CharactersFactory) {
+  function CharactersController($scope, CharactersFactory, CustomOverlayFactory) {
     function initialize() {
       $scope.characters = {
         list: []
@@ -10,6 +10,12 @@
         success: requestSuccess
       });
       $scope.navigate = navigate;
+      $scope.view = view;
+    }
+
+    function view(character) {
+      CharactersFactory.view.current = character;
+      CustomOverlayFactory.open();
     }
 
     function navigate(next) {
@@ -29,6 +35,7 @@
     .controller('CharactersController', [
       '$scope',
       'CharactersFactory',
+      'CustomOverlayFactory',
       CharactersController
     ]);
 }(angular));
