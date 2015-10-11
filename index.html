@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="swapi">
-  <head>
-    <title>dnzk</title>
-  </head>
-  <body ng-controller="BodyController">
+
+<head>
+  <title>dnzk</title>
+  <link rel="stylesheet" href="app/styles/main.css" />
+</head>
+
+<body>
+  <div class="container" ng-controller="CharactersController">
     <h1>Pan daemon aeon</h1>
     <ul>
       <li ng-repeat="character in characters.list track by $index">
@@ -16,11 +20,16 @@
     <button ng-click="navigate('next')">
       Next
     </button>
-    
-    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="./bower_components/restangular/dist/restangular.js"></script>
-    <script type="text/javascript" src="./bower_components/lodash/lodash.js"></script>
-    <script type="text/javascript" src="./bower_components/sprintf/src/sprintf.js"></script>
-    <script type="text/javascript" src="./app/app.js"></script>
-  </body>
+    <!-- this is a comment -->
+  </div>
+
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="./bower_components/restangular/dist/restangular.js"></script>
+  <script type="text/javascript" src="./bower_components/lodash/lodash.js"></script>
+  <script type="text/javascript" src="./bower_components/sprintf/src/sprintf.js"></script>
+  <script type="text/javascript" src="./app/app.js"></script>
+  <script type="text/javascript" src="./app/characters/characters.controller.js"></script>
+  <script type="text/javascript" src="./app/characters/characters.service.js"></script>
+</body>
+
 </html>

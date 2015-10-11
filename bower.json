@@ -18,5 +18,8 @@
     "angular": "~1.4.7",
     "restangular": "~1.5.1",
     "sprintf": "~1.0.3"
+  },
+  "devDependencies": {
+    "bootstrap-less-only": "~3.3.4"
   }
 }
