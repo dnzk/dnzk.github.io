@@ -14,16 +14,16 @@ module.exports = function(grunt) {
       }
     },
     less: {
-    	dev: {
-    		options: {
-    			// compress: true,
-    			// yuicompress: true,
-    			// optimization: 2
-    		},
-    		files: {
-    			'app/styles/main.css': 'app/styles/main.less'
-    		}
-    	}
+      dev: {
+        options: {
+          // compress: true,
+          // yuicompress: true,
+          // optimization: 2
+        },
+        files: {
+          'app/styles/main.css': 'app/styles/main.less'
+        }
+      }
     },
     watch: {
       options: {
@@ -33,11 +33,11 @@ module.exports = function(grunt) {
         files: ['**/*.html']
       },
       js: {
-      	files: ['app/**/*.js']
+        files: ['app/**/*.js']
       },
       less: {
-      	files: ['app/**/*.less'],
-      	task: ['less:dev']
+        files: ['app/**/*.less'],
+        tasks: ['less:dev']
       }
     }
   });

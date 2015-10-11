@@ -1,9 +1,16 @@
 <div>
-  <ul>
+  <!-- <ul>
     <li ng-repeat="character in characters.list track by $index">
       <span>{{ character.name }}</span>
     </li>
-  </ul>
+  </ul> -->
+  <div class="row">
+    <div ng-repeat="character in characters.list track by $index" class="col-sm-3">
+      <div class="well character-well" ng-click="view(character)">
+        <p>{{ character.name }}</p>
+      </div>
+    </div>
+  </div>
   <button ng-click="navigate('prev')">
     Previous
   </button>

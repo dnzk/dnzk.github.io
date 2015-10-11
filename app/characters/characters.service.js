@@ -45,6 +45,9 @@
     Characters.prototype.currentPage = currentPage;
     Characters.prototype.pages = pages;
     Characters.prototype.navigation = navigation;
+    Characters.prototype.view = {
+      current: {}
+    };
     return new Characters();
   }
   angular.module('swapi')
