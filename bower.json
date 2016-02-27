@@ -1,0 +1,19 @@
+{
+  "name": "dnzk.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dnzk/dnzk.github.io",
+  "authors": [
+    "dnzk <danishkalesaran@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.16"
+  }
+}
