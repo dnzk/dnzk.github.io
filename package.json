@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/dnzk/dnzk.github.io#readme",
   "devDependencies": {
+    "bourbon": "^4.2.7",
     "gh-pages": "^0.11.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "gulp-serve": "^1.4.0",
-    "gulp-watch": "^4.3.9"
+    "gulp-watch": "^4.3.9",
+    "node-bourbon": "^4.2.8"
   }
 }

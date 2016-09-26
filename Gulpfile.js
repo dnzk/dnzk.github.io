@@ -7,12 +7,14 @@ gulp.task('serve', serve('dist'));
 
 gulp.task('dev', [
   'clean:dist',
-  'copy:html',
-  'compile:style',
-  'watch:html',
-  'watch:style',
+  'build:template',
+  'watch:all',
   'serve'
 ]); 
+
+gulp.task('build:template', ['copy:html', 'compile:style']);
+
+gulp.task('watch:all', ['watch:html', 'watch:style']);
 
 gulp.task('watch:html', function () {
   gulp.watch('src/*.html', ['copy:html']);
@@ -29,7 +31,9 @@ gulp.task('watch:style', function () {
 
 gulp.task('compile:style', function () {
   gulp.src('src/style.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: require('node-bourbon').includePaths
+    }).on('error', sass.logError))
     .pipe(gulp.dest('dist'));
 });
 
