@@ -8,12 +8,13 @@ $color-4: #D1E5E8;
 $color-5: #E5FFFC;
 
 html {
-  font-family: Helvetica, Sans serif;
+  font-family: Monaco, monospace, Sans serif;
 }
 
 html, body,
 div,
 h1, h2, h4, h4, h5, h6,
+p,
 ul, li {
   margin: 0;
   padding: 0;
@@ -25,18 +26,38 @@ div {
 }
 
 body {
-  background-color: $color-5;
-  color: $color-1;
+  background-color: rgb(0, 0, 0);
+  color: rgb(182, 182, 182);
 }
 
 #app {
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
+  line-height: 2em;
+  h1 {
+    font-size: 1em;
+  }
   #center {
     @include display(flex);
     @include flex-direction(column);
     @include justify-content(center);
-    @include align-items(center);
+    .list {
+      @include display(flex);
+      @include justify-content(space-between);
+      list-style-type: none;
+      a {
+        color: rgb(104, 253, 254);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.under-construction {
+          color: rgb(106, 118, 252);
+          pointer-events: none;
+          cursor: default;
+        }
+      }
+    }
   }
 }
